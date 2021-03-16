@@ -1,0 +1,14 @@
+Simulate a tournament output following the next conditions: 
+- You need to use this data structure : https://s3.amazonaws.com/cortex-cerebro/playoff_structure.jpg 
+- Team count and player count needs to be dynamic ( Use 8 for the team count and 21 for the player count) 
+- Each player has a fixed success rating ranging from 0.15 to 1 (at random). 
+- Based on a team's players success rating precalculate the average success rating for each team. 
+- Based on the team success rating, find the winner by simulating each round. 
+- The team having the highest score have higher chances to win. 
+(If Team A has a 0.56 rating and Team B has a 0.76 rating, Team B has 0.20 more chances to win the match) 
+
+You will be evaluated on these criteria: 
+- Data structure is respected (Classes, Object Oriented Programming) 
+- Success rate for a player should be random 
+- The logic behind how the match rounds are executed 
+- Code general appreciation 
