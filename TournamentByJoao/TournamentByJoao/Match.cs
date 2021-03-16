@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TournamentByJoao
 {
-    class Match
+    public class Match
     {
         public Team TeamA { get; set; }
         public Team TeamB { get; set; }
@@ -25,13 +25,17 @@ namespace TournamentByJoao
 
         public Team MatchScore(Team T1, Team T2)
         {
+            Team winner = new Team();
             Random random = new Random();
             Team min = T1.Rating <= T2.Rating ? T1 : T2;
             Team max = T1.Rating > T2.Rating ? T1 : T2;
             double result = random.NextDouble() * (T1.Rating + T2.Rating);
 
+            //Console.WriteLine($"{T1.Name} aganist  {T2.Name}");
 
-            return result <= min.Rating ? min : max; ;
+            winner = result <= min.Rating ? min : max;
+            //Console.WriteLine($"Winner {winner.Name}");
+            return winner;
         }
 
 

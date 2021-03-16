@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TournamentByJoao
 {
-    class Player
+    public class Player
     {
 
         public double Rating { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TournamentByJoao
 {
-    class Team
+    public class Team
     {
         public string Name { get; set; }
 
@@ -46,6 +46,15 @@ namespace TournamentByJoao
             return avg;
         }
 
+        //public double PopulateRating2(List<Player> players)
+        //{
+        //    var doubleList = players.OfType<double>();
+
+        //    return doubleList.Average();
+        //}
+
+
+
 
         //public Team CreateTeam()
         //{
@@ -63,10 +72,11 @@ namespace TournamentByJoao
         {
             List<Team> listT = new List<Team>();
 
-            Player p = new Player();
+
 
             for (int i = 0; i < 8; i++)
             {
+                Player p = new Player();
                 Team t = new Team();
 
                 t.Name = PopulateName(i);
@@ -79,5 +89,9 @@ namespace TournamentByJoao
             return listT;
         }
 
+        public override string ToString()
+        {
+            return $"Winner Name: {Name} Rating: {Rating} ";
+        }
     }
 }
