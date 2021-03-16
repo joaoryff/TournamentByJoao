@@ -31,11 +31,7 @@ namespace TournamentByJoao
             Team max = T1.Rating > T2.Rating ? T1 : T2;
             double result = random.NextDouble() * (T1.Rating + T2.Rating);
 
-            //Console.WriteLine($"{T1.Name} aganist  {T2.Name}");
-
-            winner = result <= min.Rating ? min : max;
-            //Console.WriteLine($"Winner {winner.Name}");
-            return winner;
+            return result <= min.Rating ? min : max; ;
         }
 
 
