@@ -34,7 +34,7 @@ namespace TournamentByJoao
             return name[i];
         }
 
-        public double PopulateRating(List<Player> players)
+        public double PopulateTeamRating(List<Player> players)
         {
             // Depois fazer refactory
             double avg = 0;
@@ -46,27 +46,7 @@ namespace TournamentByJoao
             return avg;
         }
 
-        //public double PopulateRating2(List<Player> players)
-        //{
-        //    var doubleList = players.OfType<double>();
-
-        //    return doubleList.Average();
-        //}
-
-
-
-
-        //public Team CreateTeam()
-        //{
-        //    Player p = new Player();
-
-        //    Team t = new Team();
-
-        //    t.Players = p.CreateListPlayers();
-        //    t.Rating = PopulateRating(t.Players);
-
-        //    return t;
-        //}
+       
 
         public List<Team> CreateListTeams()
         {
@@ -81,7 +61,7 @@ namespace TournamentByJoao
 
                 t.Name = PopulateName(i);
                 t.Players = p.CreateListPlayers();
-                t.Rating = PopulateRating(t.Players);
+                t.Rating = PopulateTeamRating(t.Players);
                 listT.Add(t);
 
             }

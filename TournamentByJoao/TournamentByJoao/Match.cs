@@ -10,28 +10,37 @@ namespace TournamentByJoao
     {
         public Team TeamA { get; set; }
         public Team TeamB { get; set; }
-        public Double Score { get; set; }
+        //public Double Score { get; set; }
 
-        public Match(Team teamA, Team teamB, double score)
+        public Match(Team teamA, Team teamB)
         {
             TeamA = teamA;
             TeamB = teamB;
-            Score = score;
+            //Score = score;
         }
 
         public Match()
         {
         }
 
+        //public Team MatchScore2(Team T1, Team T2)
+        //{
+
+        //    Random random = new Random();
+        //    Team min = T1.Rating <= T2.Rating ? T1 : T2;
+        //    Team max = T1.Rating > T2.Rating ? T1 : T2;
+        //    double result = random.NextDouble() * (T1.Rating + T2.Rating);
+
+        //    return result <= min.Rating ? min : max; ;
+        //}
         public Team MatchScore(Team T1, Team T2)
         {
-            Team winner = new Team();
+
             Random random = new Random();
-            Team min = T1.Rating <= T2.Rating ? T1 : T2;
-            Team max = T1.Rating > T2.Rating ? T1 : T2;
+
             double result = random.NextDouble() * (T1.Rating + T2.Rating);
 
-            return result <= min.Rating ? min : max; ;
+            return result <= T1.Rating ? T1 : T2; ;
         }
 
 
