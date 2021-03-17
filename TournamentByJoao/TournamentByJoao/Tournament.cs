@@ -23,24 +23,24 @@ namespace TournamentByJoao
 
         }
 
-        public List<Team> GetTeamsWinners2(List<Team> ListTeam)
-        {
+        //public List<Team> GetTeamsWinners2(List<Team> ListTeam)
+        //{
 
-            List<Team> tList = new List<Team>();
+        //    List<Team> tList = new List<Team>();
 
-            for (int i = 0, j = ListTeam.Count - 1; i < ListTeam.Count / 2; i++, j--)
-            {
-                Team tWinner = new Team();
-                Match m = new Match();
-                tWinner = m.MatchScore(ListTeam[i], ListTeam[j]);
-                tList.Add(tWinner);
+        //    for (int i = 0, j = ListTeam.Count - 1; i < ListTeam.Count / 2; i++, j--)
+        //    {
+        //        Team tWinner = new Team();
+        //        Match m = new Match();
+        //        tWinner = m.MatchScore(ListTeam[i], ListTeam[j]);
+        //        tList.Add(tWinner);
 
-                Console.WriteLine($"{ListTeam[i].Name} aganist  {ListTeam[j].Name}");
-                Console.WriteLine($"Winner {tWinner.Name}");
-            }
+        //        Console.WriteLine($"{ListTeam[i].Name} aganist  {ListTeam[j].Name}");
+        //        Console.WriteLine($"Winner {tWinner.Name}");
+        //    }
 
-            return tList;
-        }
+        //    return tList;
+        //}
         public List<Team> GetTeamsWinners(List<Team> ListTeam)
         {
 
