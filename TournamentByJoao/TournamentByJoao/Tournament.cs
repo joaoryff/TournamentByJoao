@@ -72,13 +72,10 @@ namespace TournamentByJoao
             return ListTeam[0];
         }
 
-        public Tournament CreateTournament(List<Team> ListTeam)
+        public void CreateTournament(List<Team> ListTeam)
         {
-            Tournament tour = new Tournament();
-            tour.Result = GetWinner(ListTeam);
-            tour.Teams = ListTeam;
-
-            return tour;
+            Result = GetWinner(ListTeam);
+            Teams = ListTeam;
         }
     }
 }

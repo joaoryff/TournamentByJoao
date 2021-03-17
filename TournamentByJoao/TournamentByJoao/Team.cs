@@ -27,11 +27,11 @@ namespace TournamentByJoao
         {
         }
 
-        public string PopulateName(int i)
+        public void PopulateName(int i)
         {
             string[] name = new string[] { "A", "B", "C", "D", "E", "F", "G", "H" };
 
-            return name[i];
+            Name = name[i];
         }
 
         public double PopulateTeamRating(List<Player> players)
@@ -46,7 +46,7 @@ namespace TournamentByJoao
             return avg;
         }
 
-       
+
 
         public List<Team> CreateListTeams()
         {
@@ -59,10 +59,10 @@ namespace TournamentByJoao
                 Player p = new Player();
                 Team t = new Team();
 
-                t.Name = PopulateName(i);
-                t.Players = p.CreateListPlayers();
-                t.Rating = PopulateTeamRating(t.Players);
-                listT.Add(t);
+                PopulateName(i);
+                Players = p.CreateListPlayers();
+                Rating = PopulateTeamRating(Players);
+                listT.Add(new Team(Name, Rating));
 
             }
 

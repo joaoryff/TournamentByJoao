@@ -13,7 +13,7 @@ namespace TournamentByJoao
 
         public Player(double rating)
         {
-            this.Rating = rating;
+            Rating = rating;
         }
 
         public Player()
@@ -21,11 +21,16 @@ namespace TournamentByJoao
         }
 
 
-        public Player CreatePlayer()
+        //public Player CreatePlayer()
+        //{
+        //    Random random = new Random();
+        //    Player p = new Player(random.NextDouble() * (1 - 0.15) + 0.15);
+        //    return p;
+        //}  
+        public void CreatePlayer()
         {
             Random random = new Random();
-            Player p = new Player(random.NextDouble() * (1 - 0.15) + 0.15);
-            return p;
+            Rating = (random.NextDouble() * (1 - 0.15) + 0.15);
         }
         public List<Player> CreateListPlayers()
         {
@@ -34,7 +39,8 @@ namespace TournamentByJoao
 
             for (int i = 0; i < 21; i++)
             {
-                listPlayer.Add(CreatePlayer());
+                CreatePlayer();
+                listPlayer.Add(new Player(Rating));
             }
 
             return listPlayer;
